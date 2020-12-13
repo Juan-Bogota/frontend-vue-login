@@ -1,6 +1,14 @@
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
+import axios from 'axios'
+
+
+// http://127.0.0.1:3000
+const base = axios.create({
+  baseURL: 'https://glacial-everglades-74306.herokuapp.com'
+})
+Vue.prototype.$http = base;
 
 Vue.config.productionTip = false
 
